@@ -8,8 +8,9 @@ body{
     padding: 5px;
     font-size: 130%;
     text-align: center;
-    float: left;
+    
     width: 100%;
+    clear:both;
 }
 .lewy1, .lewy2{
     background-color: #EFEFEF;
@@ -32,7 +33,9 @@ body{
 .obraz{
     filter: drop-shadow(10px 10px 7px DimGray);
     margin: 20px;
+    
 }
+
 table, tr, th, td{
      border: solid 1px #4FB3BF;
 }

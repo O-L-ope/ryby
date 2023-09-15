@@ -15,20 +15,22 @@
         <h1>Portal dla wędkarzy</h1>
     </div>
 
+
     <div class="lewy1">
         <h3>Ryby zamieszkujące rzeki</h3>
         
         <ol>
             <?php
-                $query = mysqli_query($mysqli, "SELECT nazwa, akwen, wojewodztwo FROM ryby, lowisko WHERE rodzaj = 3;");
+                //$query = mysqli_query($mysqli, "SELECT nazwa, akwen, wojewodztwo FROM ryby, lowisko WHERE rodzaj = 3;");
+                $query = mysqli_query($mysqli, "SELECT ryby.nazwa, lowisko.akwen, lowisko.wojewodztwo FROM ryby, lowisko WHERE lowisko.Ryby_id = ryby.id AND lowisko.rodzaj = 3;");
                 while($r = mysqli_fetch_row($query)){
                     echo "<li>".$r[0]."".$r[1].",".$r[2]."</li>";
                 }
             
             ?>
         </ol>
-    </div>
-    <div class="lewy2">
+    <!-- </div>
+    <div class="lewy2"> -->
         <h3>Ryby drapieżne naszych wód</h3>
         <table class="tabela">
             <tr>
@@ -51,6 +53,7 @@
 
     <div class="prawy">
         <img class="obraz" src="ryba2.jpg" alt="Sum"/>
+        <br>
         <a href="kwarendy.txt">Pobierz kwarendy</a>
 
     </div>
