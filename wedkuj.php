@@ -46,7 +46,7 @@
                     $lp++;
                 }
             
-            
+                mysqli_close($mysqli);
             ?>
         </table>
     </div>
