@@ -16,10 +16,11 @@ body{
     background-color: #EFEFEF;
     width: 55%;
     float: left;
+    height: 450px;
 }
-.lewy1{
-    height: 150px;
-}
+/* .lewy1{
+    /* height: 150px; */
+/*}*/
 .lewy2{
     height: 300px;
 }

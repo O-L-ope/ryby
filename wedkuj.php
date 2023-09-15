@@ -24,7 +24,7 @@
                 //$query = mysqli_query($mysqli, "SELECT nazwa, akwen, wojewodztwo FROM ryby, lowisko WHERE rodzaj = 3;");
                 $query = mysqli_query($mysqli, "SELECT ryby.nazwa, lowisko.akwen, lowisko.wojewodztwo FROM ryby, lowisko WHERE lowisko.Ryby_id = ryby.id AND lowisko.rodzaj = 3;");
                 while($r = mysqli_fetch_row($query)){
-                    echo "<li>".$r[0]."".$r[1].",".$r[2]."</li>";
+                    echo "<li>".$r[0]." ".$r[1].", ".$r[2]."</li>";
                 }
             
             ?>
